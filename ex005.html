@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Basico</title>
+</head>
+<style>
+    body{
+        background-color: rgb(35, 35, 82);
+        font: normal 18pt arial;
+    }
+</style>
+<body>
+    <h1>Inicio do <stronger>DOM</stronger><div class="break"></div><stronger>D</stronger>ocument.<stronger>O</stronger>bject.<stronger>M</stronger>odel</h1> 
+    <p> Aqui tera um resultado:</p>
+    <p>( )</p>
+    <p>Aprendendo a usar o <stronger>DOM</stronger> no <stronger>JS!</stronger></p>
+    <div id="msg">->Clica em nim eu<-</div>
+    
+    <script>
+        var p1 = window.document.getElementsByTagName("p")[2]
+        var p2 = window.document.getElementsByTagName("p")[1]
+        var p3 = window.document.getElementsByTagName("p")[0]
+        //var d1 = window.document.getElementById('msg')
+        window.document.write("esta escrito assim: <br/> ("+p1.innerText+")")
+        window.document.write("<br/> Olá, Mundo!<br/>")
+        window.document.write("Eu, estou vivo!")
+        //d1.style.color = 'blue'
+        p2.style.color = "red"
+        var d1 = window.document.querySelector('div#msg')//se class (.)
+        d1.style.color= 'blue'
+        
+        
+
+    </script>
+</body>
+</html>

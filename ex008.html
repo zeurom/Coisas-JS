@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Media</title>
+</head>
+<body>
+    <h1>media de valroes</h1>
+    <input type="number" name="num1" id = 'num1'><br/>
+    <input type="number" name="num2" id='num2'><br/>
+    <input type="number" name="num3" id='num3'><br/>
+    <input type="button" value="medias" onclick="medias()">
+    <div id='resposta'>Resultado: </div> 
+    <script>
+        function Medias(){
+            var nu1 = window.document.querySelector("input#num1")
+            var nu2 = window.document.querySelector("input#num2")
+            var nu3 = window.document.querySelector("input#num3")
+            var resposta = window.document.querySelector('input#resposta')
+            var n1 = Number(nu1.value)
+            var n2 = Number(nu2.value)
+            var n3 = Number(nu3.value)
+            var media = (n1 + n2 + n3)/3
+            resposta.innerHTML = `A media entre ${n1}, ${n2} ${n3} é igual a ${media}`
+    }
+    
+    </script>
+</body>
+</html>
