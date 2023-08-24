@@ -5,47 +5,60 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.0/css/all.min.css">
     <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <title>Teste de portifolio</title>
 </head>
 <body>
 
     <div class="background">
         <header>
             <div class="logo">
-                <i class="fa-solid fa-e"></i>
+                <i class="fa-solid fa-terminal"></i>
             </div><!--logo-->
-            <div class="cabçalho-link">
-                    
-                    <li> 
-                        <a href="#">home</a> 
-                    </li>
-                    
-                    <li> 
-                        <a href="#">Sobre</a> 
-                    </li>
-                    
-                    <li> 
-                        <a href="#">Serviços</a> 
-                    </li>
-                    
-                    <li> 
-                        <a href="#">Trabalho</a> 
-                    </li>
-                    <button>Meu contato</button>
-
-            </div><!---cabeçalho link-->
         </header>
         
-        <div class = "containe-texte">
-            <div class = "text">
-                <h3>Olá, Esgoto!</h3>
-                <h1>Meu nome é <spam>TTdoLIXAO</spam></h1>
-                <p>Sou Viciado em bolor.
-                    <br> Vou te contar um pouco sobre mim e o que eu faço! </p>
-                    <div class="redes-sociais"
-                    <a href="#"><i class="fa-brands fa-github"></i></a>
-                    <button class="btn">Sobre Min</button>
+        <div class="container-text">
+            <div class="text">
+                <h3>Olá, Mundo!</h3>
+                <h1>Meu nome é <span>Brenno</span></h1>
+                <div class="redes-sociais">
+                    <a href="https://github.com/zeurom?tab=repositories"><i class="fa-brands fa-github"></i></a>
+                </div><!---redes-sociais-->
+            </div><!---text-->
+
+            <div class="toggleText">
+                <p id="textContent" style="display: none;">Sou um programador criativo no segundo período de Ciências da Computação na
+                    <br> Faculdade de Ciências Aplicadas e Sociais de Petrolina (Facape). Já possuo 
+                    <br> familiaridade com diversas linguagens de programação, sendo proficientes em
+                    <br> Python, e atualmente estou aprofundando meus estudos em C. Além disso, estou  
+                    <br> focado no desenvolvimento web, com conhecimentos sólidos em HTML, CSS e
+                    <br> estou aprendendo JavaScript por meio de um curso oferecido pela Softex.</p>
+                    <button class="btn" id="toggleButton">Sobre Mim</button>
+            </div><!---toggle-text-->
+        </div><!---container-text-->
     </div><!---background-->
-    
+
+    <script>
+    const toggleButton = document.getElementById("toggleButton");
+    const textContent = document.getElementById("textContent");
+    const toggleText = document.querySelector(".toggleText");
+
+    toggleButton.addEventListener("click", function () {
+        if (textContent.style.display === "none") {
+            textContent.style.display = "block";
+            toggleButton.textContent = "Menos";
+            toggleText.classList.add("active");
+        } else {
+            textContent.style.display = "none";
+            toggleButton.textContent = "Sobre Mim";
+            toggleText.classList.remove("active");
+        }
+    });
+    </script>
+
 </body>
 </html>
+
+
+
+
+
