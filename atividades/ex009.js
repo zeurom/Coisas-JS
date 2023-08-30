@@ -32,4 +32,3 @@ boolean: ${VarBool}
 bigint: ${VarBigint}
 String: ${VarString}
 symbol: ${VarSymbol.toString()}`);
-
